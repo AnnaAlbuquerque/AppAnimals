@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:app_animals/Screens/loginPage.dart';
-import 'package:app_animals/Screens/animalsPage.dart';
 
 
 //Initial page is LoginPage 
@@ -10,7 +9,8 @@ class MyApp extends StatelessWidget{
   @override
   Widget build (BuildContext context){
     return MaterialApp(
-      home: AnimalsPage(),
+      debugShowCheckedModeBanner: false,
+      home: LoginPage(),
     );
   }
 }

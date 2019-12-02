@@ -1,3 +1,4 @@
+import 'package:app_animals/Screens/animalPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
@@ -23,6 +24,7 @@ class _LoginPageState extends State<LoginPage> {
     final screen = MediaQuery.of(context).size;
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
 
         body: ListView(
@@ -169,7 +171,11 @@ class _LoginPageState extends State<LoginPage> {
               borderRadius: BorderRadius.all(
                 Radius.circular(20.0),
               ),
-              onTap: () {},
+              onTap: (){
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context) => AnimalsPage()),
+                );
+              },
               child: Container(
                 height: screen.height * 0.06,
                 width: screen.width * 0.5,
