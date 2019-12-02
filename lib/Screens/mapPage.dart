@@ -23,8 +23,7 @@ class _MapPageState extends State<MapPage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         // body: GoogleMap(
         //   onMapCreated: _onMapCreated,
         //   initialCameraPosition: CameraPosition(
@@ -32,7 +31,6 @@ class _MapPageState extends State<MapPage> {
         //     zoom: 11.0,
         //   ),
         // ),
-      ),
     );
   }
 }

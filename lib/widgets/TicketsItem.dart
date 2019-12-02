@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Screens/animalDetailsPage.dart';
+import '../Screens/ticketsDetailsPage.dart';
 
 class TicketItem extends StatelessWidget {
   String id;
@@ -10,16 +10,16 @@ class TicketItem extends StatelessWidget {
 
   TicketItem(this.id, this.nome, this.itens, this.responsavel, this.descricao);
 
-  // void selectComunitie(BuildContext ctx){
-  //   Navigator.of(ctx).push(MaterialPageRoute(builder: (_){
-  //     return ComunitieDetailsPage(id, name, responsible, descricao, area, accounts);
-  //   }));
-  // }
+  void selectTicket(BuildContext ctx){
+    Navigator.of(ctx).push(MaterialPageRoute(builder: (_){
+      return TicketDetailsPage(id, nome, itens, responsavel, descricao);
+    }));
+  }
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {}, //=> selectComunitie(context),
+      onTap: () => selectTicket(context),
       splashColor: Colors.grey,
       child: Container(
         padding: const EdgeInsets.all(20),

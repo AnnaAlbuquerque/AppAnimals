@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Screens/animalDetailsPage.dart';
+import '../Screens/comunitiesDetailsPage.dart';
 
 class ComunitieItem extends StatelessWidget {
 
@@ -14,16 +14,16 @@ class ComunitieItem extends StatelessWidget {
 
   ComunitieItem(this.id,this.name, this.responsible, this.descricao, this.area, this.accounts);
 
-  // void selectComunitie(BuildContext ctx){
-  //   Navigator.of(ctx).push(MaterialPageRoute(builder: (_){
-  //     return ComunitieDetailsPage(id, name, responsible, descricao, area, accounts);
-  //   }));
-  // }
+  void selectComunitie(BuildContext ctx){
+    Navigator.of(ctx).push(MaterialPageRoute(builder: (_){
+      return ComunitiesDetailsPage(id, name, responsible, descricao, area, accounts);
+    }));
+  }
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () { }, //=> selectComunitie(context),
+      onTap: () => selectComunitie(context),
       splashColor: Colors.grey,
       child: Container(
         padding: const EdgeInsets.all(20),
