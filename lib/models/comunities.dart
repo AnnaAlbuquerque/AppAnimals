@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class Comunities{
   String id;
   String nome;
-  var responsaveis = new List();
+  String responsaveis;
   String descricao;
-  var areaAbrange = new List();
-  var contas = new List();
+  String areaAbrange;
+  String contas;
 
   Comunities({
     @required this.id,

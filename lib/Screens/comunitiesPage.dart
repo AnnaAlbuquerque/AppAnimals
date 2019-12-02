@@ -1,8 +1,8 @@
 import 'package:app_animals/Screens/animalAddPage.dart';
 import 'package:app_animals/models/comunities.dart';
 import 'package:flutter/material.dart';
-import '../defaultValues/animal_data.dart';
-import '../widgets/AnimalItem.dart';
+import '../defaultValues/comunities_data.dart';
+import '../widgets/ComunitiesItem.dart';
 
 
 class ComunitiesPage extends StatelessWidget {
@@ -12,18 +12,16 @@ class ComunitiesPage extends StatelessWidget {
      final screen = MediaQuery.of(context).size;
     return Scaffold(
       body: ListView(
-        // children: ANIMALS_DATA
-        //     .map((animalData) => AnimalItem(
-        //         animalData.id,
-        //         animalData.name,
-        //         animalData.species,
-        //         animalData.genre,
-        //         animalData.age,
-        //         animalData.hair,
-        //         animalData.status,
-        //         animalData.contactNumber,
-        //         animalData.picture))
-        //     .toList(),
+        children: COMUNITIES_DATA
+            .map((comunitiesData) => ComunitieItem(
+                comunitiesData.id,
+                comunitiesData.nome,
+                comunitiesData.responsaveis,
+                comunitiesData.descricao,
+                comunitiesData.areaAbrange,
+                comunitiesData.contas,
+                ))
+            .toList(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

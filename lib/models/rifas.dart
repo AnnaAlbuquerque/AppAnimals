@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 class Rifas {
   String id;
   String nome;
-  var itens = new List();
+  String itens;
   String responsavel;
   String descricao;
 

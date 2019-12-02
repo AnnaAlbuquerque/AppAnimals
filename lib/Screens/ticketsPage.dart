@@ -1,7 +1,7 @@
 import 'package:app_animals/Screens/animalAddPage.dart';
 import 'package:flutter/material.dart';
-import '../defaultValues/animal_data.dart';
-import '../widgets/AnimalItem.dart';
+import '../defaultValues/rifas_data.dart';
+import '../widgets/TicketsItem.dart';
 
 class TicketsPage extends StatelessWidget {
 
@@ -10,18 +10,15 @@ class TicketsPage extends StatelessWidget {
     final screen = MediaQuery.of(context).size;
     return Scaffold(
       body: ListView(
-          //   children: ANIMALS_DATA
-          //       .map((animalData) => AnimalItem(
-          //           animalData.id,
-          //           animalData.name,
-          //           animalData.species,
-          //           animalData.genre,
-          //           animalData.age,
-          //           animalData.hair,
-          //           animalData.status,
-          //           animalData.contactNumber,
-          //           animalData.picture))
-          //       .toList(),
+            children: RIFAS_DATA
+                .map((ticketData) => TicketItem(
+                    ticketData.id,
+                    ticketData.nome,
+                    ticketData.itens,
+                    ticketData.responsavel,
+                    ticketData.descricao
+                    ))
+                .toList(),
           ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
