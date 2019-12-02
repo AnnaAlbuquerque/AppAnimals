@@ -1,3 +1,4 @@
+import 'package:app_animals/Screens/bottomMenuPage.dart';
 import 'package:app_animals/Screens/animalPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -173,7 +174,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               onTap: (){
                 Navigator.push(context,
-                MaterialPageRoute(builder: (context) => AnimalsPage()),
+                MaterialPageRoute(builder: (context) => BottomMenuPage()),
                 );
               },
               child: Container(

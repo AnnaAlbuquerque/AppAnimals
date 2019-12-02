@@ -20,6 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
   grouped_buttons: ^1.0.4
+  google_maps_flutter: ^0.4.0
 
 
   # The following adds the Cupertino Icons font to your application.
